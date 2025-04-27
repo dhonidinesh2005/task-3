@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Design</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #1a202c;
+      color: #edf2f7;
+      padding: 2rem;
+    }
+
+    h1 {
+      color: #4fd1c5;
+    }
+
+    .box {
+      background: #2d3748;
+      padding: 2rem;
+      border-radius: 10px;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .box {
+        background: #4fd1c5;
+        color: #1a202c;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Responsive Design Example</h1>
+  <div class="box">
+    Resize the window to see the color of this box change based on screen width!
+  </div>
+</body>
+</html>

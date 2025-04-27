@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joke API</title>
+  <style>
+    body {
+      background: #1a202c;
+      color: #edf2f7;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .joke {
+      background: #2d3748;
+      padding: 1.5rem;
+      border-radius: 10px;
+      margin: 1rem auto;
+      max-width: 600px;
+    }
+
+    button {
+      background: #f6ad55;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Joke Generator</h1>
+  <div class="joke" id="joke">Click the button to get a random joke!</div>
+  <button onclick="getJoke()">Get Joke</button>
+
+  <script>
+    async function getJoke() {
+      const res = await fetch('https://official-joke-api.appspot.com/jokes/random');
+      const data = await res.json();
+      document.getElementById('joke').textContent = `${data.setup} — ${data.punchline}`;
+    }
+  </script>
+</body>
+</html>

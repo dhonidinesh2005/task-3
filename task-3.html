@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NextGen Styles & JavaScript</title>
+  <style>
+    :root {
+      --main-color: #4fd1c5;
+      --accent-color: #f6ad55;
+      --bg-color: #1a202c;
+      --text-color: #edf2f7;
+      --card-bg: #2d3748;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: var(--main-color);
+      color: #1a202c;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+      display: grid;
+      gap: 2rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-left: 5px solid var(--accent-color);
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    a.button-link {
+      display: inline-block;
+      margin-top: 1rem;
+      background-color: var(--accent-color);
+      color: #1a202c;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>NextGen Web: Responsive. Interactive. Real-time.</header>
+  <main>
+    <section class="card">
+      <h2>Responsive Design</h2>
+      <p>Click below to explore how media queries adapt your website to all devices.</p>
+      <a href="./responsive.html" class="button-link">View Responsive Design</a>
+    </section>
+
+    <section class="card">
+      <h2>Interactive Quiz</h2>
+      <p>Test your JavaScript knowledge with a quick quiz!</p>
+      <a href="./quiz.html" class="button-link">Start Quiz</a>
+    </section>
+
+    <section class="card">
+      <h2>Image Carousel</h2>
+      <p>Explore rotating visuals with a smooth image carousel.</p>
+      <a href="./carousel.html" class="button-link">View Carousel</a>
+    </section>
+
+    <section class="card">
+      <h2>API Joke Generator</h2>
+      <p>Get a fresh joke from an API every time you click.</p>
+      <a href="api.html" class="button-link">Try Joke API</a>
+    </section>
+  </main>
+</body>
+</html>

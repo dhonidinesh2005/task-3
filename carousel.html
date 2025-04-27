@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Carousel</title>
+  <style>
+    body {
+      background: #1a202c;
+      color: #edf2f7;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    img {
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      background: #f6ad55;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Image Carousel</h1>
+  <img id="carousel-img" src="https://picsum.photos/800/400?random=1" alt="Carousel Image" />
+  <br />
+  <button onclick="rotateImage()">Next Image</button>
+
+  <script>
+    let index = 2;
+    function rotateImage() {
+      document.getElementById('carousel-img').src = `https://picsum.photos/800/400?random=${index}`;
+      index++;
+    }
+  </script>
+</body>
+</html>
